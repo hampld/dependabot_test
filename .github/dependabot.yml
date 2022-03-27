@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Enable version updates for bundler
+  - package-ecosystem: "bundler"
+    # Look for a `Gemfile` and 'lock' in the `root` directory
+    directory: "/"
+    # Check for updates every day (weekdays)
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+      - "Awaiting Review"
+      - "ruby"
+    open-pull-requests-limit: 30
